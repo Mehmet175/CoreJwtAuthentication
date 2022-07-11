@@ -49,4 +49,30 @@
   app.UseAuthentication();
 ```
 
+## Token Oluşturma İşlemi
+> Aşağıdaki metot kullanıcının olup olmadığına bakıyor kullanıcı varsa token döndürüyor.
+```c#
+    public string Authenticate(string username, string password)
+        {
+            if(!_users.Any(m => m.Key == username && m.Value == password))
+            {
+                return null;
+            }
 
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var tokenKey = Encoding.ASCII.GetBytes(_key);
+            var tokenDescription = new SecurityTokenDescriptor()
+            {
+                // Gövdemin
+                Subject = new ClaimsIdentity(new Claim[] 
+                { 
+                    new Claim(ClaimTypes.Name, username)
+                }),
+                Expires = DateTime.UtcNow.AddHours(1),
+                SigningCredentials = new SigningCredentials(
+                    new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescription);
+            return tokenHandler.WriteToken(token);
+        }
+```
