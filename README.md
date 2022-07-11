@@ -22,6 +22,8 @@
 
 > Eğer erişimi kısıtlamak istemiyorsak "AllowAnonymous" attribute’sini kullanırız.
 
+## Startup'da Gerekli Ayarların Yapılması
+> ConfigureServices metoduna aşağıdaki gerekli başlangıç ayarları yapılır.
 
 ```c#
   services.AddAuthentication(x => 
@@ -41,3 +43,10 @@
                 };
             });
 ```
+
+> Configure metoduna aşağıdaki satır eklenir.
+```c#
+  app.UseAuthentication();
+```
+
+
