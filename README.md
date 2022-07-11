@@ -7,7 +7,7 @@
 
 
 ### İlgili Attribute'ler
-![resim](https://user-images.githubusercontent.com/76875926/178302689-3e37cb7d-d034-417a-aefb-aa9a185518f5.png)
+<img src="https://user-images.githubusercontent.com/76875926/178302689-3e37cb7d-d034-417a-aefb-aa9a185518f5.png" width="500">
 -> Temel anlamda erişimi kısıtlamak için controller sınıfımıza "Authorize" attribute’sini eklemek yeterlidir.
 
 
