@@ -21,3 +21,10 @@
 <img src="https://user-images.githubusercontent.com/76875926/178303077-d3e70a23-e675-4a41-a9ee-bfd43b818cbf.png" width="500">
 
 > Eğer erişimi kısıtlamak istemiyorsak "AllowAnonymous" attribute’sini kullanırız.
+
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
