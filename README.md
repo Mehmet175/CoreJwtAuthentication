@@ -11,5 +11,5 @@
 -> Temel anlamda erişimi kısıtlamak için controller sınıfımıza "Authorize" attribute’sini eklemek yeterlidir.
 
 
-<img src="https://user-images.githubusercontent.com/76875926/178303077-d3e70a23-e675-4a41-a9ee-bfd43b818cbf.png" width="200">
+<img src="https://user-images.githubusercontent.com/76875926/178303077-d3e70a23-e675-4a41-a9ee-bfd43b818cbf.png" width="400">
 -> Eğer erişimi kısıtlamak istemiyorsak "AllowAnonymous" attribute’sini kullanırız.
